@@ -1,1 +1,12 @@
-<h1>Hello World</h1>
+<div class="row" id="favCards">
+  {{#each burgers}}
+  <div class="col s3 m3">
+    <div class="card">
+      <div class="card-content">
+        <h3>{{this.burger_name}}</h3>
+        <h4></h4>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
