@@ -1,12 +1,49 @@
-<div class="row" id="favCards">
-  {{#each burgers}}
-  <div class="col s3 m3">
-    <div class="card">
-      <div class="card-content">
-        <h3>{{this.burger_name}}</h3>
-        <h4></h4>
+<div class="container">
+  <h1 class="center">Eat-Da-Burger!</h1>
+
+  <div class="row">
+    <div class="col m6">
+      <h2>Burgers</h2>
+
+      {{#each burgers}}
+      {{#unless devoured}}
+      <div class="row">
+        <div class="col m6">
+          <div class="card-panel white">
+            <span class="black-text">
+              <h5>{{this.burger_name}}</h5>
+            </span>
+            <a class="waves-effect waves-light btn">Eat!</a>
+          </div>
+        </div>
       </div>
+      {{/unless}}
+      {{/each}}
     </div>
+
+
+    <div class="col m6">
+      <h2>Eaten Burgers</h2>
+      {{#each burgers}}
+      {{#if devoured}}
+      <div class="row">
+        <div class="col m6">
+          <div class="card-panel white">
+            <span class="black-text">
+              <h5>{{this.burger_name}}</h5>
+            </span>
+            <a class="waves-effect waves-light btn">Eat!</a>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+      {{/each}}
+    </div>
+
   </div>
-  {{/each}}
+
+  <div class="form-group row">
+    <input class="col-ms" type="search" id="burgerName" placeholder="Enter Burger Name">
+    <button id="searchBtn" class="btn" type="submit" name="action">Add</button>
+  </div>
 </div>
