@@ -6,14 +6,14 @@
       <h2>Burgers</h2>
 
       {{#each burgers}}
-      {{#unless devoured}}
+      {{#unless eaten}}
       <div class="row">
         <div class="col m6">
           <div class="card-panel white">
             <span class="black-text">
-              <h5>{{this.burger_name}}</h5>
+              <h5 id="test">{{this.burger_name}}</h5>
             </span>
-            <a class="waves-effect waves-light btn">Eat!</a>
+            <a  class="waves-effect waves-light btn eatBurger" key ="{{this.id}}" eaten = "{{this.eaten}}"> Eat! </a>
           </div>
         </div>
       </div>
@@ -25,14 +25,14 @@
     <div class="col m6">
       <h2>Eaten Burgers</h2>
       {{#each burgers}}
-      {{#if devoured}}
+      {{#if eaten}}
       <div class="row">
         <div class="col m6">
           <div class="card-panel white">
             <span class="black-text">
               <h5>{{this.burger_name}}</h5>
             </span>
-            <a class="waves-effect waves-light btn">Eat!</a>
+            <a class="waves-effect waves-light btn uneat" key={{this.id}};>Uneat!</a>
           </div>
         </div>
       </div>
@@ -44,6 +44,8 @@
 
   <div class="form-group row">
     <input class="col-ms" type="search" id="burgerName" placeholder="Enter Burger Name">
-    <button id="searchBtn" class="btn" type="submit" name="action">Add</button>
+    <button id="add" class="btn" type="submit" name="action">Add</button>
   </div>
 </div>
+
+

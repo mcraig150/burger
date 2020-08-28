@@ -9,5 +9,5 @@ USE burger_db;
 CREATE TABLE burgers (
  id INTEGER NOT NULL AUTO_INCREMENT,
  burger_name VARCHAR(64) NOT NULL,
- eaten BOOLEAN
+ eaten TINYINT
 );

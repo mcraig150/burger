@@ -7,6 +7,11 @@ const exphbs = require('express-handlebars')
 
 const routes = require("./controllers/controller")
 
+app.use(express.json());
+
+app.use(express.static('public'));
+
+
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
