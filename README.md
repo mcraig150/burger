@@ -6,7 +6,7 @@
 
 
 
-![Picture](public/capture2.PNG)
+![Picture](public/Capture2.PNG)
 
 https://burgerify.herokuapp.com/
 
